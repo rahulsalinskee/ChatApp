@@ -17,6 +17,7 @@ namespace ChatApp.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            ViewBag.NumberOfClient = ConnectedUser.UsersId.Count;
             return View();
         }
         
